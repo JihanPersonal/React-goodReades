@@ -1,5 +1,4 @@
 import React from "react";
-//import "../css/style.css";
 const BookItem = props => {
   return (
     <tr key={props.id}>
