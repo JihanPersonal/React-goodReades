@@ -1,0 +1,16 @@
+.container {
+  width: 45%;
+  padding: 70px;
+  margin-top: 1%;
+  border-radius: 25px;
+  border-style: dashed;
+  border-color: gray;
+}
+.header {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  padding-left: 100px;
+}
+.output {
+  padding-top: 20px;
+}
