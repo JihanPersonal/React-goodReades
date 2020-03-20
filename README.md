@@ -15,11 +15,11 @@ You will also see any lint errors in the console.<br/>
 The server is hosted on [http://localhost:3010](http://localhost:3010)
 
 ### Repl.it
-This project also hosted on Repl.it you can vist it [https://React-goodReades.jihanpersonal.repl.co](https://React-goodReades.jihanpersonal.repl.co)</br>
+This project also hosted on Repl.it you can vist it:<br/> [https://React-goodReades.jihanpersonal.repl.co](https://React-goodReades.jihanpersonal.repl.co)</br>
 
 _Notice: Repl.it will be inactive after ceterain period of time, so it will take a while for repl to bring it active for first time visit_
 
-You need to add .env file and add the following:<br/>
+You need to add .env file and add the following if you want to host it on your repl.it:<br/>
 
 **DANGEROUSLY_DISABLE_HOST_CHECK=true**<br/>
 **goodReadsApikey=KEY**<br/>
