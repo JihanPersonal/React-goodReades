@@ -10,18 +10,6 @@ function Author() {
   const [author, setAuthor] = useState();
   //Used for Auhtors replied by the service
   const [authors, setAuthors] = useState([]);
-  useEffect(() => {
-    //Add an event lister for Enter and Return Key
-    const listener = event => {
-      if (event.code === "Enter" || event.code === "NumpadEnter") {
-        handleClick();
-      }
-    };
-    document.addEventListener("keydown", listener);
-    return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  }, [author]);
   //#endregion
 
   //#region Event Handlers
@@ -31,7 +19,8 @@ function Author() {
     setAuthor(e.target.value);
   };
   //Handler for Search Button Click
-  const handleClick = () => {
+  const handleClick = e => {
+    e.preventDefault();
     if (author !== undefined) {
       axios
         .get("searchAuthor/" + author, {
@@ -55,7 +44,7 @@ function Author() {
             className="form-inline"
             id="searchArea"
             onSubmit={
-              handleChange //Handle Enterkey and Return Key Event inside input
+              handleClick
             }
           >
             <input
@@ -70,9 +59,8 @@ function Author() {
             />
             <input
               id="searchButton"
-              type="button"
+              type="submit"
               className="btn btn-info"
-              onClick={handleClick}
               value="Search"
             />
           </form>
